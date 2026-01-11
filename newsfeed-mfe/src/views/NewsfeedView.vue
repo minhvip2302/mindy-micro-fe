@@ -40,14 +40,18 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import AuthenticatedLayout from 'shared_core/AuthenticatedLayout'
-import FeedHeader from '../components/FeedHeader.vue'
-import FeedSidebar from '../components/FeedSidebar.vue'
-import StoriesSection from '../components/StoriesSection.vue'
-import PostComposer from '../components/PostComposer.vue'
-import PostCard from '../components/PostCard.vue'
-import TrendsWidget from '../components/TrendsWidget.vue'
-import SuggestionsWidget from '../components/SuggestionsWidget.vue'
-import MobileBottomNav from '../components/MobileBottomNav.vue'
+// Feed components
+import FeedHeader from '../components/feed/FeedHeader.vue'
+import FeedSidebar from '../components/feed/FeedSidebar.vue'
+import MobileBottomNav from '../components/feed/MobileBottomNav.vue'
+// Story components
+import StoriesSection from '../components/story/StoriesSection.vue'
+// Post components
+import PostComposer from '../components/post/PostComposer.vue'
+import PostCard from '../components/post/PostCard.vue'
+// Widget components
+import TrendsWidget from '../components/widgets/TrendsWidget.vue'
+import SuggestionsWidget from '../components/widgets/SuggestionsWidget.vue'
 
 const userAvatar = ref('https://lh3.googleusercontent.com/aida-public/AB6AXuB0HUqeQPph4DfdDCYkXR2Jf_L1InI-swY8Nd4PtQR4hjuqPGKiDuegVs1DfESiH3sJeVa2RcnLhZX_RILlcZp7rDR40QJ0b390Os065O-BrWmaNqWWE6d8hnoHTUPZJtTcaj7-za-dKcq66faC53mluGQ2M7KmPXl-y-Tb6jS9he-YXUFjPdP3dC8OoQMYFMtMm-7Pv-ew-z9QybtFS-aaltLDn4fNW_bPK1ypCtBVd0d1Ro9At1dwdqmJq5KK-rrhqvCdpIMqMJNj')
 
