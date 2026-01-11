@@ -18,6 +18,18 @@ export default defineConfig({
       shared: ['vue', 'pinia', 'vue-router', 'axios'],
     }),
   ],
+  build: {
+    target: 'esnext',
+    minify: false,
+    cssCodeSplit: false,
+    rollupOptions: {
+      output: {
+        format: 'esm',
+        entryFileNames: 'assets/[name].js',
+        minifyInternalExports: false,
+      },
+    },
+  },
   server: {
     port: 3004,
   },

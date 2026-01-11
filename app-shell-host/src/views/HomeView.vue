@@ -1,29 +1,39 @@
 <template>
-  <div class="home">
-    <!-- Hero Section -->
-    <HeroSection 
-      :is-logged-in="isLoggedIn"
-      @go-to-login="goToLogin"
-      @go-to-profile="goToProfile"
-    />
+  <DefaultLayout :is-logged-in="isLoggedIn" :username="username" :user-avatar="userAvatar" @login="handleLogin" @logout="handleLogout">
+    <div class="home">
+      <!-- Hero Section -->
+      <HeroSection 
+        :is-logged-in="isLoggedIn"
+        @go-to-login="goToLogin"
+        @go-to-profile="goToProfile"
+      />
 
-    <!-- Features Section -->
-    <FeaturesSection />
+      <!-- Features Section -->
+      <FeaturesSection />
 
-    <!-- Stats Section -->
-    <StatsSection />
-  </div>
+      <!-- Stats Section -->
+      <StatsSection />
+    </div>
+  </DefaultLayout>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import { useRouter } from 'vue-router'
+import { useAuthStore } from 'shared_core/AuthStore'
+// @ts-ignore - DefaultLayout will be available after core-shared-library rebuild
+import DefaultLayout from 'shared_core/DefaultLayout'
 import HeroSection from '../components/HeroSection.vue'
 import FeaturesSection from '../components/FeaturesSection.vue'
 import StatsSection from '../components/StatsSection.vue'
 
 const router = useRouter()
-const isLoggedIn = ref(false) // This would come from auth store
+const authStore = useAuthStore()
+
+// Lấy state từ authStore
+const isLoggedIn = computed(() => authStore.isLoggedIn)
+const username = ref('') // Có thể lấy từ authStore nếu có
+const userAvatar = ref('') // Có thể lấy từ authStore nếu có
 
 const goToProfile = () => {
   router.push('/profile')
@@ -31,6 +41,16 @@ const goToProfile = () => {
 
 const goToLogin = () => {
   router.push('/login')
+}
+
+const handleLogin = () => {
+  router.push('/login')
+}
+
+const handleLogout = () => {
+  authStore.clearAuth()
+  username.value = ''
+  userAvatar.value = ''
 }
 </script>
 

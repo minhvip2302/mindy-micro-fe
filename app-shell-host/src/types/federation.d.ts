@@ -65,6 +65,37 @@ declare module 'shared_core/MaintenanceView' {
   export default component
 }
 
+declare module 'shared_core/AuthenticatedLayout' {
+  import { DefineComponent } from 'vue'
+  const component: DefineComponent<
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {
+      header?: () => any
+      footer?: () => any
+      default?: () => any
+    }
+  >
+  export default component
+}
+
+declare module 'shared_core/DefaultLayout' {
+  import { DefineComponent } from 'vue'
+  const component: DefineComponent<{
+    isLoggedIn?: boolean
+    username?: string
+    userAvatar?: string
+  }, {}, {}, {}, {}, {}, {}, {
+    default?: () => any
+  }>
+  export default component
+}
+
 declare module 'shared_core/ApiClient' {
   export * from 'axios'
 }

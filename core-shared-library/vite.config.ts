@@ -26,7 +26,9 @@ export default defineConfig({
         './Layout': './src/components/Layout.vue',
         './Logo': './src/components/Logo.vue',
         './MaintenanceView': './src/components/MaintenanceView.vue',
-        './MaintenanceLayout': './src/components/MaintenanceLayout.vue',
+        './MaintenanceLayout': './src/layouts/MaintenanceLayout.vue',
+        './AuthenticatedLayout': './src/layouts/AuthenticatedLayout.vue',
+        './DefaultLayout': './src/layouts/DefaultLayout.vue',
         
         // Xuất Service API
         './ApiClient': './src/services/apiClient.ts',

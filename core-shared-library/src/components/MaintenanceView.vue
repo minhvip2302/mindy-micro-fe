@@ -30,7 +30,7 @@
 </template>
 
 <script setup lang="ts">
-import MaintenanceLayout from './MaintenanceLayout.vue'
+import MaintenanceLayout from '../layouts/MaintenanceLayout.vue'
 
 // Đánh dấu component này là MaintenanceView để App.vue có thể detect
 defineOptions({

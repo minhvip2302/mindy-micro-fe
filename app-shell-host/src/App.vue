@@ -1,29 +1,8 @@
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted, computed } from 'vue'
-import Layout from 'shared_core/Layout'
+import { ref, onMounted, onUnmounted } from 'vue'
 import router from './router'
 
-// Kiểm tra xem component có phải là MaintenanceView không
-const isMaintenanceView = (component: any) => {
-  if (!component) return false
-  
-  // Kiểm tra nhiều cách để detect MaintenanceView
-  const componentName = component?.__name || component?.name || component?.__file || ''
-  const componentType = component?.type?.__name || component?.type?.name || ''
-  const componentSetup = component?.setup?.toString() || ''
-  
-  // Kiểm tra nếu có MaintenanceView hoặc MaintenanceLayout trong component
-  const hasMaintenance = 
-    componentName.includes('MaintenanceView') || 
-    componentName.includes('MaintenanceLayout') ||
-    componentName.includes('maintenance') ||
-    componentType.includes('MaintenanceView') ||
-    componentType.includes('MaintenanceLayout') ||
-    componentSetup.includes('MaintenanceLayout') ||
-    componentSetup.includes('MaintenanceView')
-  
-  return hasMaintenance
-}
+// Không cần import Layout - mỗi component tự quản lý layout của nó
 
 const isLoggedIn = ref(false)
 const username = ref('')
@@ -104,17 +83,11 @@ onUnmounted(() => {
     <div class="progress-bar-fill"></div>
   </div>
   
-  <!-- Kiểm tra nếu component là MaintenanceView thì không wrap trong Layout -->
+  <!-- Mỗi component tự quản lý layout của nó - không wrap trong Layout ở đây -->
   <RouterView v-slot="{ Component, route }">
-    <template v-if="isMaintenanceView(Component)">
+    <Transition name="page" mode="out-in">
       <component :is="Component" :key="route.path" />
-    </template>
-    <Layout v-else :is-logged-in="isLoggedIn" :username="username" :user-avatar="userAvatar" @login="handleLogin"
-      @logout="handleLogout">
-      <Transition name="page" mode="out-in">
-        <component :is="Component" :key="route.path" />
-      </Transition>
-    </Layout>
+    </Transition>
   </RouterView>
 </template>
 
