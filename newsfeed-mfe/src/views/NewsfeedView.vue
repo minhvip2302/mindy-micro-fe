@@ -55,7 +55,10 @@ const stories = ref([
   { id: '1', name: 'Jane', avatar: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAgcixJJW27VQGwG8Xx68Wj2V0jsAC5R9WDuyxFz_q8ZzipDctDL7o6N6bP1FVnta0BiTjVI2RPQnUgy_nizypQcMtecredMkr9g3BJeSuW2LcabEyWxyFFmjbI-W9nZ_OEDpytEBZ58OQxMakoqvtKxdTHXiOxUXPeumnY8rwURU9FvemEwK3diU7i9alKIM-fu8Ra-_tuJVD6fXhJSytYVZAKRMMnpyAOyjHx7A4jJYRE-k57VlkfCAgX3W_2_oLEERZYdikttSII' },
   { id: '2', name: 'Mike', avatar: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDDwUS9jBavKFCcRZadxzqR7OgEgWFrmyjXNEldh8MyDJsM746024Cn553QeS4jVxdgwVxZv7GQ9iODTu4LK3M2JSi67am_hi9DTejx39Vz-trn0pZjo1QmLUQygFjr80LYU2cCuS-j-BP4emgeQ_ZTEHlDsaTuwJ9oV1bPZyNL0Wgy7ekBLM6-mUCDykIUgEKoxnf9PH4HfUoSh9xDd3K-XW-vi_H1dKfwAdVvX5Z2RN8q27Pes2TRO6n-YhAuwZs5PXlqPWj3piZl' },
   { id: '3', name: 'Sarah', avatar: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD-M6VWt4MgvkjgOxUl3a36kgZ2lC-Co1nlHlOF7_ROj4n5rpqG9x7yjmRGmqL2BpSCnXHZ2XOmQP9rFVtNsHfPs8MpoPKilAWcUtmUQNzxVkflruqyimFHIH3eNtHLOz3QdfGjdG_HggokJLjt7msfZ-Rc415InBa4ZZuLMRHB8SFUWYqXQheLGhMNeWO4xkz7DA9neynVstb83W9mqmN7QvoERGNfo5-DSP41lYvJLOnQlwelS4_7T3PLqIwUEmglv6_3z2MPal1R', viewed: true },
-  { id: '4', name: 'Alex', avatar: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBretmxJhb0kluHbBJ5zfYHhuLIvON6QPUO8Ez50Hzbb_t7SEetsqWF3XHVl8LGaAqT_cbcn99fMAcBgnXGkSvcsbHusw2R4ZN7xtPRt-unaSmwECLqjSOqY8o36hKkYzFLAvsgjXDqqgH4OICD_YaOdt3vDZmk994DqDy9DEGTvTkNFM2wG72hhwbclqEmennWt7TKCxCo1wjvYdvx7GNyi_LtChoHpdMWSaYZrHt5THwIfD2Mk3EKLg1rz-3l1NsV_alTFj-ZgH8C' }
+  { id: '4', name: 'Alex', avatar: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBretmxJhb0kluHbBJ5zfYHhuLIvON6QPUO8Ez50Hzbb_t7SEetsqWF3XHVl8LGaAqT_cbcn99fMAcBgnXGkSvcsbHusw2R4ZN7xtPRt-unaSmwECLqjSOqY8o36hKkYzFLAvsgjXDqqgH4OICD_YaOdt3vDZmk994DqDy9DEGTvTkNFM2wG72hhwbclqEmennWt7TKCxCo1wjvYdvx7GNyi_LtChoHpdMWSaYZrHt5THwIfD2Mk3EKLg1rz-3l1NsV_alTFj-ZgH8C' },
+  { id: '5', name: 'Minh', avatar: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBretmxJhb0kluHbBJ5zfYHhuLIvON6QPUO8Ez50Hzbb_t7SEetsqWF3XHVl8LGaAqT_cbcn99fMAcBgnXGkSvcsbHusw2R4ZN7xtPRt-unaSmwECLqjSOqY8o36hKkYzFLAvsgjXDqqgH4OICD_YaOdt3vDZmk994DqDy9DEGTvTkNFM2wG72hhwbclqEmennWt7TKCxCo1wjvYdvx7GNyi_LtChoHpdMWSaYZrHt5THwIfD2Mk3EKLg1rz-3l1NsV_alTFj-ZgH8C' },
+  { id: '6', name: 'Thanh', avatar: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBretmxJhb0kluHbBJ5zfYHhuLIvON6QPUO8Ez50Hzbb_t7SEetsqWF3XHVl8LGaAqT_cbcn99fMAcBgnXGkSvcsbHusw2R4ZN7xtPRt-unaSmwECLqjSOqY8o36hKkYzFLAvsgjXDqqgH4OICD_YaOdt3vDZmk994DqDy9DEGTvTkNFM2wG72hhwbclqEmennWt7TKCxCo1wjvYdvx7GNyi_LtChoHpdMWSaYZrHt5THwIfD2Mk3EKLg1rz-3l1NsV_alTFj-ZgH8C' },
+  { id: '7', name: 'Hieu', avatar: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBretmxJhb0kluHbBJ5zfYHhuLIvON6QPUO8Ez50Hzbb_t7SEetsqWF3XHVl8LGaAqT_cbcn99fMAcBgnXGkSvcsbHusw2R4ZN7xtPRt-unaSmwECLqjSOqY8o36hKkYzFLAvsgjXDqqgH4OICD_YaOdt3vDZmk994DqDy9DEGTvTkNFM2wG72hhwbclqEmennWt7TKCxCo1wjvYdvx7GNyi_LtChoHpdMWSaYZrHt5THwIfD2Mk3EKLg1rz-3l1NsV_alTFj-ZgH8C' }
 ])
 
 const posts = ref([
@@ -136,6 +139,24 @@ const suggestions = ref([
     name: 'Creative Studio',
     detail: 'Design Agency',
     avatar: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC0YI0X6qLNbI2F9OYclrVB4Agc4mlMCxPGiYJCuMMdwhfUVxzC_vNrC6OQl3J6XuuAeIQTh9fsE0VawdDcYatEfhc3mQwP25urbbiUzd-DWCYgCjux-ziY_5xugvKzolY3ukg2qxvdNnye6pfQDbUQDzUJXtuDBTiKVU1psu40fXY3tIGWYRrYsVvQxLJxVHTPNyiU92xdeLGS3hnNYdXP4ZA-CQooKOJymjZd4cW7N3QtZRSEey_Y1q76VSQ3xznWdAiN1kusL96u'
+  },
+  {
+    id: '4',
+    name: 'a',
+    detail: 'a',
+    avatar: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC0YI0X6qLNbI2F9OYclrVB4Agc4mlMCxPGiYJCuMMdwhfUVxzC_vNrC6OQl3J6XuuAeIQTh9fsE0VawdDcYatEfhc3mQwP25urbbiUzd-DWCYgCjux-ziY_5xugvKzolY3ukg2qxvdNnye6pfQDbUQDzUJXtuDBTiKVU1psu40fXY3tIGWYRrYsVvQxLJxVHTPNyiU92xdeLGS3hnNYdXP4ZA-CQooKOJymjZd4cW7N3QtZRSEey_Y1q76VSQ3xznWdAiN1kusL96u'
+  },
+  {
+    id: '5',
+    name: 'b',
+    detail: 'b',
+    avatar: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC0YI0X6qLNbI2F9OYclrVB4Agc4mlMCxPGiYJCuMMdwhfUVxzC_vNrC6OQl3J6XuuAeIQTh9fsE0VawdDcYatEfhc3mQwP25urbbiUzd-DWCYgCjux-ziY_5xugvKzolY3ukg2qxvdNnye6pfQDbUQDzUJXtuDBTiKVU1psu40fXY3tIGWYRrYsVvQxLJxVHTPNyiU92xdeLGS3hnNYdXP4ZA-CQooKOJymjZd4cW7N3QtZRSEey_Y1q76VSQ3xznWdAiN1kusL96u'
+  },
+  {
+    id: '6',
+    name: 'c',
+    detail: 'c',
+    avatar: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC0YI0X6qLNbI2F9OYclrVB4Agc4mlMCxPGiYJCuMMdwhfUVxzC_vNrC6OQl3J6XuuAeIQTh9fsE0VawdDcYatEfhc3mQwP25urbbiUzd-DWCYgCjux-ziY_5xugvKzolY3ukg2qxvdNnye6pfQDbUQDzUJXtuDBTiKVU1psu40fXY3tIGWYRrYsVvQxLJxVHTPNyiU92xdeLGS3hnNYdXP4ZA-CQooKOJymjZd4cW7N3QtZRSEey_Y1q76VSQ3xznWdAiN1kusL96u'
   }
 ])
 
@@ -152,10 +173,9 @@ const handlePost = (content: string) => {
   max-width: 1600px;
   margin: 0 auto;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-start;
-  padding: 16px 0 80px;
-  gap: 24px;
+  /* padding: 16px 0 80px; */
 }
 
 .feed-content {
@@ -164,6 +184,7 @@ const handlePost = (content: string) => {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  margin-top: 16px;
 }
 
 .posts-list {
@@ -177,8 +198,13 @@ const handlePost = (content: string) => {
   flex-direction: column;
   width: 320px;
   position: sticky;
-  top: 96px;
-  max-height: calc(100vh - 6rem);
+  top: 64px; /* Height của FeedHeader */
+  align-self: flex-start;
+  max-height: calc(100vh - 64px); /* Full height trừ header */
+  overflow-y: auto;
+  overflow-x: hidden;
+  /* Ngăn scroll chaining - khi scroll đến top/bottom của sidebar thì không scroll content bên ngoài */
+  overscroll-behavior: contain;
   gap: 24px;
 }
 
@@ -201,9 +227,9 @@ const handlePost = (content: string) => {
 }
 
 @media (min-width: 1024px) {
-  .newsfeed-container {
+  /* .newsfeed-container {
     padding: 16px;
-  }
+  } */
   
   .right-sidebar {
     display: flex;

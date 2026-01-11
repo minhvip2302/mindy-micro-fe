@@ -1,9 +1,8 @@
 <template>
   <aside class="feed-sidebar">
     <nav class="sidebar-nav">
-      <a class="nav-item active" href="#">
-        <!-- <span class="material-symbols-outlined filled">home</span> -->
-        <span class="material-symbols-outlined icon">person</span>
+      <a class="nav-item" href="#">
+        <span class="material-symbols-outlined icon">home</span>
         <span>Home</span>
       </a>
       <a class="nav-item" href="#">
@@ -35,6 +34,46 @@
         <div class="page-icon gradient-green">T</div>
         <span>Tech Talk</span>
       </a>
+      <a class="nav-page-item" href="#">
+        <div class="page-icon gradient-green">T</div>
+        <span>Tech Talk</span>
+      </a>
+      <a class="nav-page-item" href="#">
+        <div class="page-icon gradient-green">T</div>
+        <span>Tech Talk</span>
+      </a>
+      <a class="nav-page-item" href="#">
+        <div class="page-icon gradient-green">T</div>
+        <span>Tech Talk</span>
+      </a>
+      <a class="nav-page-item" href="#">
+        <div class="page-icon gradient-green">T</div>
+        <span>Tech Talk</span>
+      </a>
+      <a class="nav-page-item" href="#">
+        <div class="page-icon gradient-green">T</div>
+        <span>Tech Talk</span>
+      </a>
+      <a class="nav-page-item" href="#">
+        <div class="page-icon gradient-green">T</div>
+        <span>Tech Talk</span>
+      </a>
+      <a class="nav-page-item" href="#">
+        <div class="page-icon gradient-green">T</div>
+        <span>Tech Talk</span>
+      </a>
+      <a class="nav-page-item" href="#">
+        <div class="page-icon gradient-green">T</div>
+        <span>Tech Talk</span>
+      </a>
+      <a class="nav-page-item" href="#">
+        <div class="page-icon gradient-green">T</div>
+        <span>Tech Talk</span>
+      </a>
+      <a class="nav-page-item" href="#">
+        <div class="page-icon gradient-green">T</div>
+        <span>Tech Talk</span>
+      </a>
     </nav>
   </aside>
 </template>
@@ -47,18 +86,38 @@
 .feed-sidebar {
   display: none;
   flex-direction: column;
-  width: 256px;
+  width: 300px;
   position: sticky;
-  top: 96px;
-  max-height: calc(100vh - 6rem);
+  top: 64px;
+  align-self: flex-start;
+  max-height: calc(100vh - 64px);
   overflow-y: auto;
-  padding-right: 16px;
+  overflow-x: hidden;
+  /* Ngăn scroll chaining - khi scroll đến top/bottom của sidebar thì không scroll content bên ngoài */
+  overscroll-behavior: contain;
+}
+
+.feed-sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.feed-sidebar::-webkit-scrollbar {
+    width: 0;
+}
+
+.feed-sidebar:hover::-webkit-scrollbar {
+    width: 8px;
+}
+
+.feed-sidebar::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2); /* Màu đen mờ */
+  border-radius: 10px; /* Bo tròn 2 đầu */
 }
 
 .sidebar-nav {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  margin-top: 16px
 }
 
 .nav-item {
@@ -74,8 +133,8 @@
 }
 
 .nav-item:hover {
-  background: #f3f4f6;
-  color: #1e293b;
+  background: rgba(37, 106, 244, 0.1);
+  color: #256af4;
 }
 
 .nav-item.active {
@@ -121,7 +180,8 @@
 }
 
 .nav-page-item:hover {
-  background: #f3f4f6;
+  background: rgba(37, 106, 244, 0.1);
+  color: #256af4;
 }
 
 .page-icon {

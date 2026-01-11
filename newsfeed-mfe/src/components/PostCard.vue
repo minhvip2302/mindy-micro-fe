@@ -8,6 +8,7 @@
           <div class="author-name-row">
             <h3 class="author-name">{{ post.author.name }}</h3>
             <span v-if="post.author.isFollowing" class="follow-badge">Follow</span>
+            <span v-else class="unfollow-badge">Unfollow</span>
           </div>
           <span class="post-time">{{ post.time }}</span>
         </div>
@@ -161,23 +162,22 @@ const formatText = (text: string) => {
 }
 
 .follow-badge {
-  width: 4px;
-  height: 4px;
-  background: #90a4cb;
-  border-radius: 9999px;
-}
-
-.follow-badge::after {
-  content: 'Follow';
-  margin-left: 8px;
+  display: flex;
+  align-items: center;
   color: #256af4;
   font-weight: 500;
   font-size: 14px;
   cursor: pointer;
 }
 
-.follow-badge::after:hover {
-  text-decoration: underline;
+.follow-badge::before {
+  content: '';
+  display: inline-block;
+  margin-right: 8px;
+  width: 4px;
+  height: 4px;
+  background: #256af4;
+  border-radius: 9999px;
 }
 
 .post-time {
