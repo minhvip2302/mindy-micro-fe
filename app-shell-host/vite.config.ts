@@ -22,7 +22,7 @@ export default defineConfig({
         
         // 2. Các MFE Remote
         auth_mfe: 'http://localhost:3001/assets/remoteEntry.js',
-        // chat_mfe: 'http://localhost:3002/assets/remoteEntry.js',
+        chat_mfe: 'http://localhost:3002/assets/remoteEntry.js',
         // notification_mfe: 'http://localhost:3003/assets/remoteEntry.js',
         newsfeed_mfe: 'http://localhost:3004/assets/remoteEntry.js',
       },

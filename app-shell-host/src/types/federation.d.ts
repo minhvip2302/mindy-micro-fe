@@ -105,3 +105,9 @@ declare module 'newsfeed_mfe/NewsfeedView' {
   const component: DefineComponent<{}, {}, any>
   export default component
 }
+
+declare module 'chat_mfe/ChatView' {
+  import { DefineComponent } from 'vue'
+  const component: DefineComponent<{}, {}, any>
+  export default component
+}

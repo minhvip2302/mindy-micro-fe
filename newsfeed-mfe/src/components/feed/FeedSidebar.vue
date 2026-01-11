@@ -117,7 +117,8 @@
 .sidebar-nav {
   display: flex;
   flex-direction: column;
-  margin-top: 16px
+  margin-top: 16px;
+  margin-left: 16px;
 }
 
 .nav-item {

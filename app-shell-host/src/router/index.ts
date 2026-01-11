@@ -50,15 +50,23 @@ const router = createRouter({
       name: 'profile',
       component: () => import('../views/ProfileView.vue'),
     },
+    // Route 4: Chat MFE
+    {
+      path: '/chat',
+      name: 'chat',
+      component: () => import('chat_mfe/ChatView').catch(() => {
+        return import('shared_core/MaintenanceView')
+      }),
+    },
   ],
 })
 
 router.beforeEach((to, from, next) => {
   // Kiểm tra nếu user đã đăng nhập và đang truy cập login/register
   // thì redirect về trang trước đó
+  const authStore = useAuthStore()
   if ((to.name === 'login' || to.name === 'register')) {
     try {
-      const authStore = useAuthStore()
       if (authStore.isLoggedIn) {
         // Nếu có route trước đó và không phải login/register, redirect về đó
         // Nếu không có hoặc từ login/register, redirect về trang chủ
@@ -74,12 +82,11 @@ router.beforeEach((to, from, next) => {
     }
   }
 
-  // const authStore = useAuthStore();
-  // if (to.meta.requiresAuth && !authStore.isLoggedIn) {
-  //     next('/login');
-  // } else {
-  //     next();
-  // }
+  if (to.meta.requiresAuth && !authStore.isLoggedIn) {
+      next('/login');
+  } else {
+      next();
+  }
   console.log('router.beforeEach');
   next();
 });
